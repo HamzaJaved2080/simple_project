@@ -1,0 +1,54 @@
+{
+    "caseSensitive": false,
+    "properties": {
+        "name": "SimpleGraph",
+        "environment": {
+            "type": "noflo-browser"
+        }
+    },
+    "inports": {},
+    "outports": {},
+    "groups": [],
+    "processes": {
+        "simple-graph/simpleComponent_x5dsr": {
+            "component": "simple-graph/simpleComponent",
+            "metadata": {
+                "label": "simpleComponent",
+                "x": 252,
+                "y": 180,
+                "width": 72,
+                "height": 72
+            }
+        },
+        "core/Output_lwoni": {
+            "component": "core/Output",
+            "metadata": {
+                "label": "Output",
+                "x": 756,
+                "y": 396,
+                "width": 72,
+                "height": 72
+            }
+        }
+    },
+    "connections": [
+        {
+            "src": {
+                "process": "simple-graph/simpleComponent_x5dsr",
+                "port": "out"
+            },
+            "tgt": {
+                "process": "core/Output_lwoni",
+                "port": "in"
+            },
+            "metadata": {}
+        },
+        {
+            "data": "any string",
+            "tgt": {
+                "process": "simple-graph/simpleComponent_x5dsr",
+                "port": "in"
+            }
+        }
+    ]
+}
